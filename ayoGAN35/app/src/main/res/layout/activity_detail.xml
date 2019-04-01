@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_nggantung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical|start"
+                android:minHeight="?android:actionBarSize"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/val_16"
+                    android:layout_marginTop="@dimen/val_8"
+                    android:layout_marginEnd="@dimen/val_16"
+                    android:layout_marginBottom="@dimen/val_8"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@android:color/white"
+                    tools:text="How to Train Your Dragon II: The Hidden World" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:padding="@dimen/val_16">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_image_detail"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="@dimen/val_4" />
+
+                <TextView
+                    android:id="@+id/tv_year_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv_image_detail"
+                    android:layout_marginStart="@dimen/val_16"
+                    android:layout_marginBottom="@dimen/val_4"
+                    android:layout_toEndOf="@id/iv_image_detail"
+                    android:maxLines="1"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/black"
+                    tools:text="2018" />
+
+                <TextView
+                    android:id="@+id/tv_duration_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_year_detail"
+                    android:layout_marginStart="@dimen/val_16"
+                    android:layout_marginBottom="@dimen/val_4"
+                    android:layout_toEndOf="@id/iv_image_detail"
+                    android:maxLines="1"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/black"
+                    tools:text="1 Minit" />
+
+                <TextView
+                    android:id="@+id/tv_rate_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_duration_detail"
+                    android:layout_marginStart="@dimen/val_16"
+                    android:layout_toEndOf="@id/iv_image_detail"
+                    android:maxLines="1"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/black"
+                    tools:text="7.9/10" />
+
+                <Button
+                    android:id="@+id/bt_add_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_rate_detail"
+                    android:layout_marginStart="@dimen/val_16"
+                    android:layout_marginTop="@dimen/val_4"
+                    android:layout_toEndOf="@id/iv_image_detail"
+                    android:text="@string/add_to_favorite" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_sinopsis_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/val_16"
+                    android:layout_marginTop="@dimen/val_8"
+                    android:layout_marginEnd="@dimen/val_16"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    tools:text="@string/txt" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_sinopsis_detail"
+                    android:layout_marginStart="@dimen/val_16"
+                    android:layout_marginTop="@dimen/val_16"
+                    android:layout_marginEnd="@dimen/val_16"
+                    android:layout_marginBottom="@dimen/val_16"
+                    app:cardCornerRadius="@dimen/val_8"
+                    app:cardElevation="@dimen/val_4"
+                    app:cardPreventCornerOverlap="false"
+                    app:contentPaddingBottom="@dimen/val_16"
+                    app:contentPaddingLeft="@dimen/val_16"
+                    app:contentPaddingRight="@dimen/val_16"
+                    app:contentPaddingTop="@dimen/val_16">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/trailers"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="@dimen/val_2"
+                            android:layout_marginTop="@dimen/val_4"
+                            android:layout_marginEnd="@dimen/val_2"
+                            android:background="@drawable/view" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/rv_youtube"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clipToPadding="false"
+                                    android:paddingTop="@dimen/val_8">
+
+                                </android.support.v7.widget.RecyclerView>
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/rv_quicktime"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clipToPadding="false"
+                                    android:paddingTop="@dimen/val_8">
+
+                                </android.support.v7.widget.RecyclerView>
+
+                            </LinearLayout>
+
+                            <ProgressBar
+                                android:id="@+id/progress_bar_trailer"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:indeterminateBehavior="repeat"
+                                android:indeterminateDrawable="@drawable/progress"
+                                android:indeterminateDuration="1500" />
+
+                            <TextView
+                                android:id="@+id/tv_no_trailer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/no_trailer"
+                                android:textAppearance="?android:textAppearanceSmall" />
+
+                        </FrameLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/val_16"
+                            android:text="@string/reviews"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="@dimen/val_2"
+                            android:layout_marginTop="@dimen/val_4"
+                            android:layout_marginEnd="@dimen/val_2"
+                            android:background="@drawable/view" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rv_review"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </android.support.v7.widget.RecyclerView>
+
+                            <ProgressBar
+                                android:id="@+id/progress_bar_review"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/val_2"
+                                android:indeterminateBehavior="repeat"
+                                android:indeterminateDrawable="@drawable/progress"
+                                android:indeterminateDuration="1500" />
+
+                            <TextView
+                                android:id="@+id/tv_no_review"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/val_4"
+                                android:text="@string/no_review"
+                                android:textAppearance="?android:textAppearanceSmall" />
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

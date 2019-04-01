@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_rated"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_rated"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/val_2"
+        android:paddingStart="@dimen/val_2"
+
+        android:paddingEnd="0dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/rl_broke_rated"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_broke_rated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_no_internet" />
+
+        <TextView
+            android:id="@+id/tv_no_internet_rated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_broke_rated"
+            android:layout_centerHorizontal="true"
+            android:text="@string/no_internet"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/orange" />
+
+        <Button
+            android:id="@+id/bt_broke_rated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_no_internet_rated"
+            android:layout_centerHorizontal="true"
+            android:text="@string/reload"
+            android:textColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/progress"
+        android:indeterminateDuration="1500" />
+
+</FrameLayout>

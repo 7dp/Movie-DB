@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Movie Database</string>
+    <string name="add_to_favorite">add to favorite</string>
+    <string name="del_from_favorite">remove from favorite</string>
+    <string name="txt">WICAK WICAK wicak wicak wicak wiack wicak wicak wiack wicak wicka jsldajsdfdsfjsldfl sdlflsdjflsdjfkjflsdjflschskhfslahjhfjahdkjhfjahsdfa alsdfsdhfkshadskfsdjhflshxuuehffluweflasyfiawejfafaiofsyfjhffshi</string>
+    <string name="trailers">Trailers:</string>
+    <string name="reviews">Reviews:</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="reload">reload</string>
+    <string name="no_review">No review on this movie</string>
+    <string name="no_trailer">No trailer on this movie</string>
+    <string name="error_playing">There was an error initializing the YoutubePlayer (%1$s)</string>
+</resources>

@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--<style name="NavigationTab" parent="Widget.Design.TabLayout">
+        &lt;!&ndash;<item name="tabBackground">@drawable/background_tab</item>&ndash;&gt;
+        &lt;!&ndash;<item name="tabSelectedTextColor">@color/primary_light</item>&ndash;&gt;
+        &lt;!&ndash;<item name="tabIndicatorColor">@color/blue</item>&ndash;&gt;
+        <item name="android:textAllCaps">true</item>
+        <item name="tabTextAppearance">?android:textAllCaps</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+    </style>-->
+
+    <style name="NavigationTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+
+</resources>
