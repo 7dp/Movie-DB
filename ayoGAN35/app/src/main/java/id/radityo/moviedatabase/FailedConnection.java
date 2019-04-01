@@ -14,6 +14,7 @@ public class FailedConnection {
             @Override
             public void onClick(View v) {
 //                hitPopularItem(API_KEY);
+                Snackbar.make(v, "Snackbar", Snackbar.LENGTH_LONG).show();
             }
         });
     }
