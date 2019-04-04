@@ -50,7 +50,6 @@ public class RealmHelper {
                     }
                     movieModel.setTimestamp(nextId);
                     realm.insertOrUpdate(movieModel);
-                    //movieModel.setMovieId(movieModel.getMovieId());
                 } else {
                     Log.e("movie", "#REALM: database not exist");
                 }
@@ -59,27 +58,12 @@ public class RealmHelper {
     }
 
     //calling all data
-    public List<MovieModel> getAllMovie() {
-        RealmResults<MovieModel> results = realm.where(MovieModel.class).findAll();
-        return results;
-    }
-
     public RealmResults<MovieModel> getStoredMovie() {
-//        Realm realm = Realm.getDefaultInstance();
-        RealmQuery<MovieModel> query = Realm.getDefaultInstance().where(MovieModel.class);
         return realm.where(MovieModel.class).sort("timestamp", Sort.DESCENDING).findAll();
     }
 
-//    public int getMovieIdFromRealm(MovieModel movieModel){
-//        RealmResults<MovieModel> models = realm.where(MovieModel.class).equalTo("movieId", movieModel.getMovieId()).findAll();
-//        realm.where(MovieModel.class).equalTo("movieId", movieModel.getMovieId()).findAll().deleteAllFromRealm();
-////        int a = models.getRealm().getVersion();
-//        return models;
-//    }
-
     public List<Reviewer> getAllReviews() {
         RealmResults<Reviewer> results = realm.where(Reviewer.class).findAll();
-//        results.load();
         return results;
     }
 
@@ -97,7 +81,6 @@ public class RealmHelper {
                 MovieModel model = realm.where(MovieModel.class)
                         .equalTo("movieId", movieId)
                         .findFirst();
-//                model.setMovieId(movieId);
                 model.setTitle(title);
                 model.setDuration(duration);
                 model.setRating(rating);
@@ -124,13 +107,10 @@ public class RealmHelper {
             @Override
             public void execute(Realm realm) {
                 final RealmResults<MovieModel> results = realm.where(MovieModel.class).equalTo("movieId", movieId).findAll();
-//                results.deleteAllFromRealm();
                 for (int i = 0; i < results.size(); i++) {
                     MovieModel model = results.get(i);
                     model.deleteFromRealm();
                 }
-//                results.deleteAllFromRealm();
-//                realm.refresh();
             }
         });
     }
