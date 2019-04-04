@@ -47,10 +47,7 @@ public class TabFavorite extends Fragment {
         modelList = realmHelper.getStoredMovie();
 
         adapterFavorit = new AdapterFavorit(modelList, getActivity(), realmHelper.getStoredMovie());
-        //between
-        favoriteAdapter = new FavoriteAdapter(modelList, getActivity());
         recyclerView.setAdapter(adapterFavorit);
-//        favoriteAdapter.notifyDataSetChanged();
 
         if (modelList.isEmpty()) {
             llNoFile.setVisibility(View.VISIBLE);
